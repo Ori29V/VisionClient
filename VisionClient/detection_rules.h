@@ -3,9 +3,9 @@
 
 typedef enum
 {
-	MEMORY = 20,
-	PROCESS = 10,
-	THREAD = 10,
+	MEMORY = 30,
+	PROCESS = 30,
+	THREAD = 20,
 
 } RuleGroup;
 

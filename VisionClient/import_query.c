@@ -65,13 +65,13 @@ int CheckTotalScore() {
 
 		}
 	}
-	sum += (memoryCount * MEMORY) + (processCount * PROCESS) + (threadCount * THREAD);
+	sum += (memoryCount > 0 ? MEMORY : 0)+ (processCount > 0 ? PROCESS : 0) + (threadCount > 0 ? THREAD : 0);
 	if (memoryCount > 0 && processCount > 0)
 	{
 		if (threadCount > 0)
 			sum += 20;
 		else
-			sum += 10;
+			sum += 20;
 	}
 	
 

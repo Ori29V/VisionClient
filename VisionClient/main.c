@@ -26,15 +26,19 @@ int main(int argc, char* argv[])
 		int score = AnalyzeFile(buffer);
 		if (score <= 50 && score >= 25)
 		{
-			printf("possible malicious program with %d score", score);
+			printf("possible malicious program with %d score\n", score);
 		}
 		else if (score < 25)
 		{
-			printf("not malicious program with %d score", score);
+			printf("not malicious program with %d score\n", score);
 		}
 		else
 		{
-			printf("malicious program with %d score", score);
+			printf("malicious program with %d score\n", score);
+			fclose(file);
+			if (DeleteFileA(argv[1])) {
+				printf("File deleted successfully.\n");
+			};
 		}
 		free(buffer);
 		return score;
